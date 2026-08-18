@@ -48,7 +48,7 @@ A arquitetura do projeto foi planejada utilizando tecnologias consolidadas no ec
 
 ```bash
 # 1. Clone o repositório
-git clone [https://github.com/MaxJunior2002/Portifolio/tree/main](https://github.com/MaxJunior2002/Portifolio/tree/main)
+git clone [Repositorio](https://github.com/MaxJunior2002/Portifolio).
 
 # 2. Acesse a pasta do projeto
 cd portfolio-profissional
