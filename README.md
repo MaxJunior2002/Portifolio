@@ -46,7 +46,6 @@ A arquitetura do projeto foi planejada utilizando tecnologias consolidadas no ec
 
 ## ⚙️ Como Executar o Projeto
 
-```bash
 # 1. Clone o repositório
 git clone [Repositorio](https://github.com/MaxJunior2002/Portifolio).
 
