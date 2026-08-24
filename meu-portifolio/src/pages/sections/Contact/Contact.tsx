@@ -3,8 +3,7 @@ import { Box, Container, Grid, styled, Typography } from "@mui/material"
 const Contact = () => {
   const StyledSection = styled("section")(() => ({
     backgroundColor: "#111827",
-    color: "#fff",
-    minHeight: "60vh",
+    color: "#fff",    minHeight: "60vh",
     display: "flex",
     alignItems: "center",
     padding: "80px 0",

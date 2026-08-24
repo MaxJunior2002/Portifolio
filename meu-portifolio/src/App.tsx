@@ -1,7 +1,13 @@
+import { CssBaseline } from "@mui/material"
 import Home from "./pages/Home"
 
 const App = () => {
-  return <Home />
+  return (
+    <>
+      <CssBaseline />
+      <Home />
+    </>
+  )
 }
 
 export default App
