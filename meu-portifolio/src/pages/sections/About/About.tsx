@@ -27,7 +27,7 @@ const About = () => {
         </Box>
 
         <Grid container spacing={3}>
-          <Grid size={7}>
+          <Grid size={{ xs: 12, md: 7 }}>
             <StyledCard>
               <Typography variant="body1" sx={{ lineHeight: 1.8 }}>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
@@ -44,7 +44,7 @@ const About = () => {
             </StyledCard>
           </Grid>
 
-          <Grid size={5}>
+          <Grid size={{ xs: 12, md: 5 }}>
             <StyledCard>
               <Typography variant="h5" sx={{ fontWeight: 600, mb: 2 }}>
                 Habilidades

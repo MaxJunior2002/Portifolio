@@ -28,7 +28,7 @@ const Contact = () => {
         </Box>
 
         <Grid container spacing={3}>
-          <Grid size={6}>
+          <Grid size={{ xs: 12, md: 6 }}>
             <StyledCard>
               <Typography variant="h5" sx={{ mb: 2, fontWeight: 600 }}>
                 Entre em contato
@@ -40,7 +40,7 @@ const Contact = () => {
             </StyledCard>
           </Grid>
 
-          <Grid size={6}>
+          <Grid size={{ xs: 12, md: 6 }}>
             <StyledCard>
               <Typography variant="body1">Email: </Typography>
               <Typography variant="body1">LinkedIn: </Typography>
