@@ -23,12 +23,12 @@ const Hero = () => {
   return (
     <StyledHero id="home">
       <Container>
-        <Grid container spacing={4} alignItems="center">
-          <Grid size={5}>
+        <Grid container spacing={4} sx={{ alignItems: "center" }}>
+          <Grid size={{ xs: 12, md: 5 }}>
             <StyledImage src={Max} alt="Maximiliano Augusto" />
           </Grid>
 
-          <Grid size={7}>
+          <Grid size={{ xs: 12, md: 7 }}>
             <Typography variant="overline" sx={{ color: "#1976d2", fontWeight: 700 }}>
               Olá, eu sou
             </Typography>
