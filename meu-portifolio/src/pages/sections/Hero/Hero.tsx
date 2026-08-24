@@ -1,5 +1,7 @@
 import { Box, Button, Container, Grid, styled, Typography } from "@mui/material"
 import Max from "../../../assets/Images/Max.jpg"
+import EmailIcon from "@mui/icons-material/Email"
+import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
 
 const Hero = () => {
   const StyledHero = styled("section")(() => ({
@@ -55,6 +57,7 @@ const Hero = () => {
                 }}
               >
                 Ver projetos
+                <ArrowForwardIosIcon sx={{ ml: 1 }} />
               </Button>
               <Button
                 variant="outlined"
@@ -68,6 +71,7 @@ const Hero = () => {
                 }}
               >
                 Contato
+                <EmailIcon sx={{ ml: 1 }} />
               </Button>
             </Box>
           </Grid>
