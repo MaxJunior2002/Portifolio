@@ -1,4 +1,5 @@
 import {
+  Alert,
   Box,
   Button,
   Container,
@@ -9,6 +10,8 @@ import {
   Typography,
 } from "@mui/material"
 import { ChangeEvent, FormEvent, useState } from "react"
+
+const API_URL = import.meta.env.VITE_API_URL || "http://localhost:8081/api"
 
 const Contact = () => {
   const StyledSection = styled("section")(() => ({
@@ -37,6 +40,7 @@ const Contact = () => {
 
   const [formData, setFormData] = useState(initialForm)
   const [isSubmitting, setIsSubmitting] = useState(false)
+  const [feedback, setFeedback] = useState<{ type: "success" | "error"; message: string } | null>(null)
 
   const handleChange = (
     event: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,
@@ -52,12 +56,34 @@ const Contact = () => {
   const handleSubmit = async (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault()
     setIsSubmitting(true)
+    setFeedback(null)
 
-    // TODO: integrar com EmailJS
-    console.log("Dados do formulário prontos para o EmailJS:", formData)
+    try {
+      const response = await fetch(`${API_URL}/contact`, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData),
+      })
 
-    setIsSubmitting(false)
-    setFormData(initialForm)
+      if (!response.ok) {
+        throw new Error("Não foi possível enviar sua mensagem.")
+      }
+
+      setFeedback({
+        type: "success",
+        message: "Mensagem enviada com sucesso!",
+      })
+      setFormData(initialForm)
+    } catch (error) {
+      setFeedback({
+        type: "error",
+        message: error instanceof Error ? error.message : "Erro ao enviar a mensagem.",
+      })
+    } finally {
+      setIsSubmitting(false)
+    }
   }
 
   return (
@@ -94,6 +120,12 @@ const Contact = () => {
             <StyledCard>
               <Box component="form" onSubmit={handleSubmit} noValidate>
                 <Stack spacing={2.5}>
+                  {feedback && (
+                    <Alert severity={feedback.type} sx={{ borderRadius: 2 }}>
+                      {feedback.message}
+                    </Alert>
+                  )}
+
                   <TextField
                     label="Nome"
                     name="name"
