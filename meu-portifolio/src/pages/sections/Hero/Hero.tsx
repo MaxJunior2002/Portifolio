@@ -36,12 +36,13 @@ const Hero = () => {
               Maximiliano Augusto
             </Typography>
             <Typography variant="h4" sx={{ color: "#374151", mb: 3 }}>
-              Engenheiro de Software
+              Analista Desenvolvedor | Engenheiro de Software
             </Typography>
             <Typography variant="body1" sx={{ lineHeight: 1.8, color: "#4b5563", maxWidth: 620 }}>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur non
-              nulla sit amet nisl tempus convallis quis ac lectus. Sed porttitor lectus
-              nibh. Vivamus magna justo, lacinia eget consectetur sed, convallis at tellus.
+              Sou um profissional apaixonado por desenvolvimento de software, com foco em
+              backend, APIs, integrações e soluções escaláveis. Trabalho com Java, Spring
+              Boot, Node.js, bancos de dados e infraestrutura, criando sistemas que unem
+              funcionalidade, performance e boa experiência de uso.
             </Typography>
 
             <Box sx={{ display: "flex", gap: 2, mt: 4, flexWrap: "wrap" }}>

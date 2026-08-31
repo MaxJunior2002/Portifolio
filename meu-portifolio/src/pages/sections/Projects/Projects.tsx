@@ -39,19 +39,19 @@ const Projects = () => {
 
   const projects = [
     {
-      title: "Projeto 01",
+      title: "API de Gestão de Clientes",
       description:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a.",
+        "Desenvolvimento de uma API REST para cadastro, consulta e manutenção de clientes, com validações, organização de regras de negócio e integração com banco de dados.",
     },
     {
-      title: "Projeto 02",
+      title: "Sistema de Integração de Dados",
       description:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque velit nisi, pretium ut lacinia in, elementum id enim.",
+        "Criação de fluxos de integração entre sistemas, com envio e recebimento de informações em padrões consistentes, melhorando comunicação entre plataformas e processos.",
     },
     {
-      title: "Projeto 03",
+      title: "Painel de Comunicação e Contato",
       description:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras ultricies ligula sed magna dictum porta.",
+        "Implementação de um fluxo de contato com envio de mensagens por meio de backend e serviços externos, oferecendo uma experiência mais ágil para comunicação com clientes e parceiros.",
     },
   ]
 

@@ -31,12 +31,13 @@ const Experiences = () => {
                 Analista Desenvolvedor Pleno
               </Typography>
               <Typography variant="subtitle2" color="text.secondary">
-                Empresa / Período
+                Desenvolvimento de sistemas e soluções digitais
               </Typography>
               <Typography variant="body1" sx={{ lineHeight: 1.8, mt: 1 }}>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed porttitor
-                lectus nibh. Donec sollicitudin molestie malesuada. Curabitur non nulla
-                sit amet nisl tempus convallis quis ac lectus.
+                Responsável por desenvolver, manter e evoluir aplicações com foco em
+                qualidade, performance e alinhamento às regras de negócio. Atuo com a
+                criação de integrações, manutenção de sistemas e apoio à entrega de
+                soluções confiáveis para usuários e áreas internas.
               </Typography>
             </StyledItem>
 
@@ -45,25 +46,28 @@ const Experiences = () => {
                 Analista Desenvolvedor Trainee
               </Typography>
               <Typography variant="subtitle2" color="text.secondary">
-                Empresa / Período
+                Suporte ao desenvolvimento e melhorias de aplicações
               </Typography>
               <Typography variant="body1" sx={{ lineHeight: 1.8, mt: 1 }}>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent sapien
-                massa, convallis a pellentesque nec, egestas non nisi. Nulla quis lorem
-                ut libero malesuada feugiat.
+                Participação no desenvolvimento de soluções tecnológicas, com foco em
+                análise de requisitos, implementação de melhorias, correções e suporte ao
+                ciclo de vida das aplicações. Também contribuo na organização de processos,
+                documentação e garantia de qualidade.
               </Typography>
             </StyledItem>
 
             <StyledItem>
               <Typography variant="h5" sx={{ fontWeight: 600 }}>
-                Estagiario de Infraestrutura
+                Estagiário de Infraestrutura
               </Typography>
               <Typography variant="subtitle2" color="text.secondary">
-                Projetos / Período
+                Suporte de infraestrutura e redes
               </Typography>
               <Typography variant="body1" sx={{ lineHeight: 1.8, mt: 1 }}>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus magna
-                justo, lacinia eget consectetur sed, convallis at tellus.
+                Atuação em suporte de infraestrutura, redes e ambientes de tecnologia,
+                incluindo monitoramento, organização de recursos e apoio à operação de
+                sistemas e usuários. Essa experiência fortaleceu minha visão técnica e meu
+                entendimento do funcionamento completo das soluções digitais.
               </Typography>
             </StyledItem>
           </Grid>

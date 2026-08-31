@@ -30,16 +30,18 @@ const About = () => {
           <Grid size={{ xs: 12, md: 7 }}>
             <StyledCard>
               <Typography variant="body1" sx={{ lineHeight: 1.8 }}>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
-                varius enim in eros elementum tristique. Duis cursus, mi quis viverra
-                ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat.
-                Aenean faucibus nibh et justo cursus id rutrum lorem imperdiet. Nunc ut
-                sem vitae risus tristique posuere.
+                Sou desenvolvedor com experiência em análise, desenvolvimento e manutenção
+                de sistemas, com atuação em soluções voltadas para backend, integrações e
+                processos de negócio. A minha trajetória combina desenvolvimento de
+                aplicações com atenção à qualidade, organização do código e entregas com
+                foco em resultado.
               </Typography>
               <Typography variant="body1" sx={{ lineHeight: 1.8, mt: 2 }}>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque velit
-                nisi, pretium ut lacinia in, elementum id enim. Curabitur arcu erat,
-                accumsan id imperdiet et, porttitor at sem.
+                Tenho experiência com Java, Spring Boot, APIs REST, banco de dados,
+                infraestrutura e suporte técnico, além de forte interesse em tecnologias
+                que unam produtividade, escalabilidade e confiabilidade. Busco sempre
+                entregar soluções práticas, bem estruturadas e alinhadas às necessidades do
+                cliente.
               </Typography>
             </StyledCard>
           </Grid>
@@ -49,11 +51,12 @@ const About = () => {
               <Typography variant="h5" sx={{ fontWeight: 600, mb: 2 }}>
                 Habilidades
               </Typography>
-              <Typography variant="body1">- Desenvolvimento Backend</Typography>
-              <Typography variant="body1">- Banco de Dados</Typography>
+              <Typography variant="body1">- Java</Typography>
+              <Typography variant="body1">- Spring Boot</Typography>
               <Typography variant="body1">- Node.js</Typography>
-              <Typography variant="body1">- Integração de APIs</Typography>
-              <Typography variant="body1">- Redes de Computadores</Typography>
+              <Typography variant="body1">- APIs REST</Typography>
+              <Typography variant="body1">- Banco de Dados</Typography>
+              <Typography variant="body1">- Infraestrutura e Redes</Typography>
             </StyledCard>
           </Grid>
         </Grid>
