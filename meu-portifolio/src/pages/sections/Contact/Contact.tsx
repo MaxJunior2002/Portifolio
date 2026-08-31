@@ -4,11 +4,20 @@ import {
   Button,
   Container,
   Grid,
+  Link,
   Stack,
   styled,
   TextField,
   Typography,
 } from "@mui/material"
+import {
+  Email,
+  GitHub,
+  Instagram,
+  LinkedIn,
+  Phone,
+  WhatsApp,
+} from "@mui/icons-material"
 import { ChangeEvent, FormEvent, useState } from "react"
 
 const API_URL = import.meta.env.VITE_API_URL || "http://localhost:8081/api"
@@ -108,10 +117,104 @@ const Contact = () => {
               </Typography>
 
               <Stack spacing={1.5} sx={{ mt: 4 }}>
-                <Typography variant="body1">Email: contato@seuportfolio.com</Typography>
-                <Typography variant="body1">LinkedIn: /in/seu-perfil</Typography>
-                <Typography variant="body1">GitHub: github.com/seu-usuario</Typography>
-                <Typography variant="body1">Telefone: +55 (00) 00000-0000</Typography>
+                <Link
+                  href="mailto:maxjunior2002@gmail.com?subject=Contato%20via%20portf%C3%B3lio"
+                  rel="noreferrer"
+                  sx={{
+                    display: "flex",
+                    alignItems: "center",
+                    gap: 1,
+                    color: "#fff",
+                    textDecoration: "none",
+                    "&:hover": { color: "#8b5cf6" },
+                  }}
+                >
+                  <Email fontSize="small" />
+                  <Typography variant="body1">maxjunior2002@gmail.com</Typography>
+                </Link>
+
+                <Link
+                  href="https://www.linkedin.com/in/maximiliano-augusto-8a57611a5/"
+                  target="_blank"
+                  rel="noreferrer"
+                  sx={{
+                    display: "flex",
+                    alignItems: "center",
+                    gap: 1,
+                    color: "#fff",
+                    textDecoration: "none",
+                    "&:hover": { color: "#8b5cf6" },
+                  }}
+                >
+                  <LinkedIn fontSize="small" />
+                  <Typography variant="body1">LinkedIn</Typography>
+                </Link>
+
+                <Link
+                  href="https://github.com/maxjunior2002"
+                  target="_blank"
+                  rel="noreferrer"
+                  sx={{
+                    display: "flex",
+                    alignItems: "center",
+                    gap: 1,
+                    color: "#fff",
+                    textDecoration: "none",
+                    "&:hover": { color: "#8b5cf6" },
+                  }}
+                >
+                  <GitHub fontSize="small" />
+                  <Typography variant="body1">GitHub</Typography>
+                </Link>
+
+                <Link
+                  href="https://www.instagram.com/maxjunior2002/"
+                  target="_blank"
+                  rel="noreferrer"
+                  sx={{
+                    display: "flex",
+                    alignItems: "center",
+                    gap: 1,
+                    color: "#fff",
+                    textDecoration: "none",
+                    "&:hover": { color: "#8b5cf6" },
+                  }}
+                >
+                  <Instagram fontSize="small" />
+                  <Typography variant="body1">Instagram</Typography>
+                </Link>
+
+                <Link
+                  href="tel:+55 31 99558-2787"
+                  sx={{
+                    display: "flex",
+                    alignItems: "center",
+                    gap: 1,
+                    color: "#fff",
+                    textDecoration: "none",
+                    "&:hover": { color: "#8b5cf6" },
+                  }}
+                >
+                  <Phone fontSize="small" />
+                  <Typography variant="body1">+55 (11) 99999-9999</Typography>
+                </Link>
+
+                <Link
+                  href="https://wa.me/5531995582787?text=Ol%C3%A1%2C%20vi%20seu%20portf%C3%B3lio%20e%20gostaria%20de%20conversar."
+                  target="_blank"
+                  rel="noreferrer"
+                  sx={{
+                    display: "flex",
+                    alignItems: "center",
+                    gap: 1,
+                    color: "#25D366",
+                    textDecoration: "none",
+                    "&:hover": { color: "#1ebc5b" },
+                  }}
+                >
+                  <WhatsApp fontSize="small" />
+                  <Typography variant="body1">WhatsApp</Typography>
+                </Link>
               </Stack>
             </StyledCard>
           </Grid>
