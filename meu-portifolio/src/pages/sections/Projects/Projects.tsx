@@ -1,6 +1,7 @@
 import { useState } from "react"
 import { ArrowBackIosNew, ArrowForwardIos } from "@mui/icons-material"
 import { Box, Card, CardContent, Container, Grid, IconButton, styled, Typography } from "@mui/material"
+import type { Language } from "../../Home"
 
 type Project = {
   title: string
@@ -26,7 +27,7 @@ const ProjectCard = ({ project }: { project: Project }) => (
   </Card>
 )
 
-const Projects = () => {
+const Projects = ({ language }: { language: Language }) => {
   const [activeProject, setActiveProject] = useState(0)
 
   const StyledSection = styled("section")(() => ({
@@ -37,30 +38,48 @@ const Projects = () => {
     padding: "80px 0",
   }))
 
-  const projects = [
-    {
-      title: "API de Gestão de Clientes",
-      description:
-        "Desenvolvimento de uma API REST para cadastro, consulta e manutenção de clientes, com validações, organização de regras de negócio e integração com banco de dados.",
-    },
-    {
-      title: "Sistema de Integração de Dados",
-      description:
-        "Criação de fluxos de integração entre sistemas, com envio e recebimento de informações em padrões consistentes, melhorando comunicação entre plataformas e processos.",
-    },
-    {
-      title: "Painel de Comunicação e Contato",
-      description:
-        "Implementação de um fluxo de contato com envio de mensagens por meio de backend e serviços externos, oferecendo uma experiência mais ágil para comunicação com clientes e parceiros.",
-    },
-  ]
+  const projects = language === "pt"
+    ? [
+        {
+          title: "API de Gestão de Clientes",
+          description:
+            "Desenvolvimento de uma API REST para cadastro, consulta e manutenção de clientes, com validações, organização de regras de negócio e integração com banco de dados.",
+        },
+        {
+          title: "Sistema de Integração de Dados",
+          description:
+            "Criação de fluxos de integração entre sistemas, com envio e recebimento de informações em padrões consistentes, melhorando comunicação entre plataformas e processos.",
+        },
+        {
+          title: "Painel de Comunicação e Contato",
+          description:
+            "Implementação de um fluxo de contato com envio de mensagens por meio de backend e serviços externos, oferecendo uma experiência mais ágil para comunicação com clientes e parceiros.",
+        },
+      ]
+    : [
+        {
+          title: "Customer Management API",
+          description:
+            "Development of a REST API for registering, querying and maintaining customers, with validations, business rules and database integration.",
+        },
+        {
+          title: "Data Integration System",
+          description:
+            "Creation of integration flows between systems, exchanging information in consistent formats to improve communication between platforms and processes.",
+        },
+        {
+          title: "Communication and Contact Panel",
+          description:
+            "Implementation of a contact flow with message sending via backend and external services, providing a faster communication experience for customers and partners.",
+        },
+      ]
 
   return (
     <StyledSection id="projects">
       <Container>
         <Box component="header" sx={{ marginBottom: 4 }}>
           <Typography variant="h3" component="h2" sx={{ fontWeight: 700 }}>
-            Projetos
+            {language === "pt" ? "Projetos" : "Projects"}
           </Typography>
         </Box>
 

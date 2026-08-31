@@ -18,11 +18,13 @@ import {
   Phone,
   WhatsApp,
 } from "@mui/icons-material"
-import { ChangeEvent, FormEvent, useState } from "react"
+import { useState } from "react"
+import type { ChangeEvent, FormEvent } from "react"
+import type { Language } from "../../Home"
 
 const API_URL = import.meta.env.VITE_API_URL || "http://localhost:8081/api"
 
-const Contact = () => {
+const Contact = ({ language }: { language: Language }) => {
   const StyledSection = styled("section")(() => ({
     backgroundColor: "#111827",
     color: "#fff",
@@ -100,7 +102,7 @@ const Contact = () => {
       <Container>
         <Box component="header" sx={{ marginBottom: 4 }}>
           <Typography variant="h3" component="h2" sx={{ fontWeight: 700 }}>
-            Contato
+            {language === "pt" ? "Contato" : "Contact"}
           </Typography>
         </Box>
 
@@ -108,12 +110,12 @@ const Contact = () => {
           <Grid size={{ xs: 12, md: 6 }}>
             <StyledCard>
               <Typography variant="h5" sx={{ mb: 2, fontWeight: 600 }}>
-                Vamos conversar?
+                {language === "pt" ? "Vamos conversar?" : "Let’s talk?"}
               </Typography>
               <Typography variant="body1" sx={{ lineHeight: 1.8, color: "#d1d5db" }}>
-                Estou disponível para oportunidades de trabalho, projetos freelance,
-                colaborações e novas ideias. Me envie uma mensagem que responderei o
-                mais breve possível.
+                {language === "pt"
+                  ? "Estou disponível para oportunidades de trabalho, projetos freelance, colaborações e novas ideias. Me envie uma mensagem que responderei o mais breve possível."
+                  : "I am available for work opportunities, freelance projects, collaborations and new ideas. Send me a message and I will get back to you as soon as possible."}
               </Typography>
 
               <Stack spacing={1.5} sx={{ mt: 4 }}>
@@ -230,7 +232,7 @@ const Contact = () => {
                   )}
 
                   <TextField
-                    label="Nome"
+                    label={language === "pt" ? "Nome" : "Name"}
                     name="name"
                     value={formData.name}
                     onChange={handleChange}
@@ -269,7 +271,7 @@ const Contact = () => {
                   />
 
                   <TextField
-                    label="Assunto"
+                    label={language === "pt" ? "Assunto" : "Subject"}
                     name="subject"
                     value={formData.subject}
                     onChange={handleChange}
@@ -288,7 +290,7 @@ const Contact = () => {
                   />
 
                   <TextField
-                    label="Mensagem"
+                    label={language === "pt" ? "Mensagem" : "Message"}
                     name="message"
                     value={formData.message}
                     onChange={handleChange}
@@ -325,7 +327,13 @@ const Contact = () => {
                       },
                     }}
                   >
-                    {isSubmitting ? "Enviando..." : "Enviar mensagem"}
+                    {isSubmitting
+                      ? language === "pt"
+                        ? "Enviando..."
+                        : "Sending..."
+                      : language === "pt"
+                        ? "Enviar mensagem"
+                        : "Send message"}
                   </Button>
                 </Stack>
               </Box>
