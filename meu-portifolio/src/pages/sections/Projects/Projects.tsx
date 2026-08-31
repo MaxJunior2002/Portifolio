@@ -1,28 +1,46 @@
 import { useState } from "react"
-import { ArrowBackIosNew, ArrowForwardIos } from "@mui/icons-material"
-import { Box, Card, CardContent, Container, Grid, IconButton, styled, Typography } from "@mui/material"
+import { ArrowBackIosNew, ArrowForwardIos, GitHub } from "@mui/icons-material"
+import { Box, Button, Card, CardContent, Container, Grid, IconButton, Link, styled, Typography } from "@mui/material"
 import type { Language } from "../../Home"
 
 type Project = {
   title: string
   description: string
+  url: string
 }
 
 const ProjectCard = ({ project }: { project: Project }) => (
-  <Card sx={{ height: "100%", borderRadius: 3 }}>
+  <Card sx={{ height: "100%", borderRadius: 3, display: "flex", flexDirection: "column" }}>
     <Box
       sx={{
         background: "linear-gradient(135deg, #1976d2, #42a5f5)",
         height: 180,
       }}
     />
-    <CardContent>
+    <CardContent sx={{ flex: 1, display: "flex", flexDirection: "column" }}>
       <Typography variant="h5" sx={{ fontWeight: 600, mb: 1 }}>
         {project.title}
       </Typography>
-      <Typography variant="body1" sx={{ lineHeight: 1.8 }}>
+      <Typography variant="body1" sx={{ lineHeight: 1.8, mb: 2, flex: 1 }}>
         {project.description}
       </Typography>
+
+      <Button
+        component={Link}
+        href={project.url}
+        target="_blank"
+        rel="noreferrer"
+        variant="contained"
+        startIcon={<GitHub />}
+        sx={{
+          mt: "auto",
+          borderRadius: 999,
+          textTransform: "none",
+          fontWeight: 600,
+        }}
+      >
+        Ver projeto
+      </Button>
     </CardContent>
   </Card>
 )
@@ -41,36 +59,30 @@ const Projects = ({ language }: { language: Language }) => {
   const projects = language === "pt"
     ? [
         {
-          title: "API de Gestão de Clientes",
+          title: "Biblioteca-Online-API",
           description:
-            "Desenvolvimento de uma API REST para cadastro, consulta e manutenção de clientes, com validações, organização de regras de negócio e integração com banco de dados.",
+            "Um projeto que simula uma biblioteca online onde os usuários podem se cadastrar, cadastrar seus livros e emprestar uns para os outros.",
+          url: "https://github.com/MaxJunior2002/Biblioteca-Online-API",
         },
         {
-          title: "Sistema de Integração de Dados",
+          title: "Projeto-Abas",
           description:
-            "Criação de fluxos de integração entre sistemas, com envio e recebimento de informações em padrões consistentes, melhorando comunicação entre plataformas e processos.",
-        },
-        {
-          title: "Painel de Comunicação e Contato",
-          description:
-            "Implementação de um fluxo de contato com envio de mensagens por meio de backend e serviços externos, oferecendo uma experiência mais ágil para comunicação com clientes e parceiros.",
+            "Um projeto de criação de uma página de login com validações para uma vaga de desenvolvedor frontend.",
+          url: "https://github.com/MaxJunior2002/Projeto-Abas",
         },
       ]
     : [
         {
-          title: "Customer Management API",
+          title: "Biblioteca-Online-API",
           description:
-            "Development of a REST API for registering, querying and maintaining customers, with validations, business rules and database integration.",
+            "A project that simulates an online library where users can register, add their books and lend them to each other.",
+          url: "https://github.com/MaxJunior2002/Biblioteca-Online-API",
         },
         {
-          title: "Data Integration System",
+          title: "Projeto-Abas",
           description:
-            "Creation of integration flows between systems, exchanging information in consistent formats to improve communication between platforms and processes.",
-        },
-        {
-          title: "Communication and Contact Panel",
-          description:
-            "Implementation of a contact flow with message sending via backend and external services, providing a faster communication experience for customers and partners.",
+            "A project to build a login page with validations for a frontend developer vacancy.",
+          url: "https://github.com/MaxJunior2002/Projeto-Abas",
         },
       ]
 

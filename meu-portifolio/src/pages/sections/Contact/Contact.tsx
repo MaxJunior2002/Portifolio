@@ -24,23 +24,24 @@ import type { Language } from "../../Home"
 
 const API_URL = import.meta.env.VITE_API_URL || "http://localhost:8081/api"
 
-const Contact = ({ language }: { language: Language }) => {
-  const StyledSection = styled("section")(() => ({
-    backgroundColor: "#111827",
-    color: "#fff",
-    minHeight: "60vh",
-    display: "flex",
-    alignItems: "center",
-    padding: "80px 0",
-  }))
+const StyledSection = styled("section")(() => ({
+  backgroundColor: "#111827",
+  color: "#fff",
+  minHeight: "60vh",
+  display: "flex",
+  alignItems: "center",
+  padding: "80px 0",
+}))
 
-  const StyledCard = styled(Box)(() => ({
-    backgroundColor: "rgba(255,255,255,0.04)",
-    border: "1px solid rgba(255,255,255,0.08)",
-    borderRadius: "16px",
-    padding: "24px",
-    height: "100%",
-  }))
+const StyledCard = styled(Box)(() => ({
+  backgroundColor: "rgba(255,255,255,0.04)",
+  border: "1px solid rgba(255,255,255,0.08)",
+  borderRadius: "16px",
+  padding: "24px",
+  height: "100%",
+}))
+
+const Contact = ({ language }: { language: Language }) => {
 
   const initialForm = {
     name: "",
