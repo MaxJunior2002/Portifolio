@@ -22,7 +22,7 @@ services:
     ports:
       - "4173:4173"
     environment:
-      VITE_API_URL: http://backend:8081/api
+      VITE_API_URL: https://portifolio-backend-swm7.onrender.com/api
     depends_on:
       - backend
     restart: unless-stopped
