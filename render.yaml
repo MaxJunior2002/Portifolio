@@ -17,12 +17,12 @@ services:
       - key: EMAILJS_PRIVATE_KEY
         value: wjbr0AY-3JlcXaF4SnzR2
 
-  - type: web
+  - type: static
     name: portfolio-frontend
-    env: docker
     rootDir: meu-portifolio
-    dockerfilePath: ./Dockerfile
-    plan: free
+    buildCommand: npm install && npm run build
+    staticPublishPath: dist
+    pullRequestPreviewsEnabled: true
     envVars:
       - key: VITE_API_URL
         value: https://portfolio-backend.onrender.com/api
