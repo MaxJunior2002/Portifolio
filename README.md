@@ -121,13 +121,3 @@ mvn package
 - Deploy publicado em ambiente de produção
 
 ---
-
-## 👤 Autor
-
-Maximiliano Augusto de Jesus Junior
-
----
-
-## 📎 Repositório
-
-https://github.com/MaxJunior2002/Portifolio
