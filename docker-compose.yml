@@ -1,0 +1,28 @@
+services:
+  backend:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    container_name: portfolio-backend
+    ports:
+      - "8081:8081"
+    environment:
+      SERVER_PORT: 8081
+      EMAILJS_SERVICE_ID: service_iutk1nl
+      EMAILJS_TEMPLATE_ID: template_c134zpm
+      EMAILJS_PUBLIC_KEY: xQAuK45IB8f2X6uG1
+      EMAILJS_PRIVATE_KEY: wjbr0AY-3JlcXaF4SnzR2
+    restart: unless-stopped
+
+  frontend:
+    build:
+      context: ./meu-portifolio
+      dockerfile: Dockerfile
+    container_name: portfolio-frontend
+    ports:
+      - "4173:4173"
+    environment:
+      VITE_API_URL: http://backend:8081/api
+    depends_on:
+      - backend
+    restart: unless-stopped

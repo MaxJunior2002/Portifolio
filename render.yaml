@@ -1,0 +1,28 @@
+services:
+  - type: web
+    name: portfolio-backend
+    env: docker
+    rootDir: backend
+    dockerfilePath: ./Dockerfile
+    plan: free
+    envVars:
+      - key: SERVER_PORT
+        value: 8081
+      - key: EMAILJS_SERVICE_ID
+        value: service_iutk1nl
+      - key: EMAILJS_TEMPLATE_ID
+        value: template_c134zpm
+      - key: EMAILJS_PUBLIC_KEY
+        value: xQAuK45IB8f2X6uG1
+      - key: EMAILJS_PRIVATE_KEY
+        value: wjbr0AY-3JlcXaF4SnzR2
+
+  - type: web
+    name: portfolio-frontend
+    env: docker
+    rootDir: meu-portifolio
+    dockerfilePath: ./Dockerfile
+    plan: free
+    envVars:
+      - key: VITE_API_URL
+        value: https://portfolio-backend.onrender.com/api
