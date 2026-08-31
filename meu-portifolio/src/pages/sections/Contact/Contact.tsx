@@ -22,7 +22,7 @@ import { useState } from "react"
 import type { ChangeEvent, FormEvent } from "react"
 import type { Language } from "../../Home"
 
-const API_URL = import.meta.env.VITE_API_URL || "https://portifolio-backend-swm7.onrender.com/api"
+const API_URL = import.meta.env.VITE_API_URL ?? "https://portifolio-backend-swm7.onrender.com/api"
 
 const StyledSection = styled("section")(() => ({
   backgroundColor: "#111827",
