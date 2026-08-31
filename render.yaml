@@ -25,4 +25,4 @@ services:
     pullRequestPreviewsEnabled: true
     envVars:
       - key: VITE_API_URL
-        value: https://portfolio-backend.onrender.com/api
+        value: https://portifolio-backend-swm7.onrender.com/api

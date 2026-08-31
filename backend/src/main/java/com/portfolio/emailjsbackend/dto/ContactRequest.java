@@ -1,6 +1,5 @@
 package com.portfolio.emailjsbackend.dto;
 
-import com.fasterxml.jackson.annotation.JsonProperty;
 import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.NotBlank;
 
@@ -52,25 +51,5 @@ public class ContactRequest {
 
     public void setMessage(String message) {
         this.message = message;
-    }
-
-    @JsonProperty("name")
-    public String getNameJson() {
-        return name;
-    }
-
-    @JsonProperty("email")
-    public String getEmailJson() {
-        return email;
-    }
-
-    @JsonProperty("subject")
-    public String getSubjectJson() {
-        return subject;
-    }
-
-    @JsonProperty("message")
-    public String getMessageJson() {
-        return message;
     }
 }
