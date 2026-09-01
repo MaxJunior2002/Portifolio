@@ -188,18 +188,23 @@ const Contact = ({ language }: { language: Language }) => {
                 </Link>
 
                 <Link
-                  href="tel:+553199558-2787"
+                  href="#"
+                  onClick={(e) => {
+                    e.preventDefault();
+                    navigator.clipboard.writeText("+5531995582787");
+                  }}
                   sx={{
                     display: "flex",
                     alignItems: "center",
                     gap: 1,
                     color: "#fff",
                     textDecoration: "none",
+                    cursor: "pointer",
                     "&:hover": { color: "#8b5cf6" },
                   }}
                 >
                   <Phone fontSize="small" />
-                  <Typography variant="body1">+55(31)99558-2787</Typography>
+                  <Typography variant="body1">+55 (31) 99558-2787</Typography>
                 </Link>
 
                 <Link
