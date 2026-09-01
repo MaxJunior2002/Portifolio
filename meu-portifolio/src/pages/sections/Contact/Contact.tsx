@@ -322,7 +322,7 @@ const Contact = ({ language }: { language: Language }) => {
                     size="large"
                     disabled={isSubmitting}
                     sx={{
-                      backgroundColor: "#f8fafc",
+                      backgroundColor: "#1976d2",
                       color: "#fff",
                       fontWeight: 700,
                       borderRadius: 2,
