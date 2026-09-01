@@ -188,7 +188,7 @@ const Contact = ({ language }: { language: Language }) => {
                 </Link>
 
                 <Link
-                  href="tel:+55 31 99558-2787"
+                  href="tel:+553199558-2787"
                   sx={{
                     display: "flex",
                     alignItems: "center",
@@ -199,7 +199,7 @@ const Contact = ({ language }: { language: Language }) => {
                   }}
                 >
                   <Phone fontSize="small" />
-                  <Typography variant="body1">+55 (11) 99999-9999</Typography>
+                  <Typography variant="body1">+55(31)99558-2787</Typography>
                 </Link>
 
                 <Link
